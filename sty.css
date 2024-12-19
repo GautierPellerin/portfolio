@@ -1,0 +1,576 @@
+/* Réinitialisation des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styles généraux du corps du document */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #333;
+    color: #333;
+  }
+  
+  /* En-tête */
+  header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .navbar a.active,
+  .navbar a:hover {
+    background: #555;
+  }
+  
+  /* Section d'accueil */
+  #accueil {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .accueil h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .accueil h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .accueil p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .accueil button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .accueil button:hover {
+    background-color: #555;
+  }
+  
+  /* Section qu'est ce que le BTS SIO ? */
+  .qu {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem 0;
+  }
+  
+  .qu h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+  }
+  
+  .qu p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Section BTS SISR et SLAM */
+  .BTS {
+    padding: 2rem;
+  }
+  
+  .BTS h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .BTS p {
+    margin-bottom: 1rem;
+  }
+  
+  .SISR, .SLAM {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+  }
+  
+  /* Pied de page */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+  }
+
+  .footer h3 {
+      color: #fff;
+      font-size: 20px;
+  }
+
+  .footer p {
+      font-size: 16px;
+  }
+
+  .container {
+      width: 80%;
+      margin: 0 auto;
+  }
+
+  .row {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .col-md-6 {
+      width: 48%;
+      margin: 10px;
+  }
+  .footer a{
+    color: #fff;
+  }
+  .footer a:hover {
+    color: lightblue;
+  }
+  
+  /* Responsivité */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .navbar a {
+      margin: 0.5rem 0;
+    }
+  
+    #accueil {
+      padding: 1rem;
+    }
+  }
+
+  .BTS section:hover {
+    transform: translateY(-10px); /* Fait surélever la section de 10px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre pour un effet plus réaliste */
+  }
+  
+  .qu:hover{
+    transform: translateY(-10px); /* Fait surélever la section de 10px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre pour un effet plus réaliste */
+  }
+
+
+
+
+
+
+
+  /* Styles pour la section #annee1 */
+#annee1 {
+    padding: 2rem;
+  }
+  
+  .annee1 h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  /* Styles pour les articles dans la section #annee1 */
+  .annee1 article {
+    margin-top: 2rem;
+  }
+  .multiburo:hover, .Scrabble:hover{
+    transform: translateY(-10px); /* Fait surélever la section de 10px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre pour un effet plus réaliste */
+  }
+  .multiburo, .Scrabble {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    margin: 0 auto; /* Ajoute une marge automatique pour centrer l'élément */
+    max-width: 70%; /* Fixe une largeur maximale pour éviter que l'élément ne dépasse de la page */
+    text-align: center; /* Centre le texte à l'intérieur de l'élément */
+    margin-top: 30px;
+  }
+  
+  .multiburo h3, .Scrabble h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .multiburo p, .Scrabble p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .multiburo img, .Scrabble img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Réglage de l'espacement des colonnes dans le pied de page pour les petits écrans */
+  @media (max-width: 768px) {
+    .footer .col-md-6 {
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+  }
+
+  
+
+
+
+
+  /* Styles pour la section #stage */
+#stage {
+    background: lightgrey;
+    padding: 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    margin: 0 auto; /* Ajoute une marge automatique pour centrer l'élément */
+    max-width: 75%; /* Fixe une largeur maximale pour éviter que l'élément ne dépasse de la page */
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  #stage h2 {
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  #stage article {
+    background: lightgrey;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+  
+  #stage h3 {
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 1rem 0;
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  #stage p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  #stage img {
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  #inetum {
+    max-width: 75%;
+    left: 0px;
+  }
+
+  #sta div{
+    margin-top: 100px;
+    padding: 10px;
+  }
+
+  /* Styles pour la section .projet */
+.projet {
+  position: relative;
+  width: 100%;
+  height: 450px; /* Fixe une hauteur pour éviter les sauts d'affichage */
+  margin: 0 auto;
+  overflow: hidden; /* Cache les images non visibles */
+}
+
+.projet img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Les images s'adaptent à la taille du conteneur */
+  transition: opacity 0,5s ease-in-out;
+  opacity: 0;
+  display: none; /* Les images non actives sont cachées */
+}
+
+.projet img.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Boutons de navigation */
+.arrow-left, .arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  z-index: 10;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+  
+  /* Réglage de l'espacement des colonnes dans le pied de page pour les petits écrans */
+  @media (max-width: 768px) {
+    .footer .col-md-6 {
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+  }
+
+  #presInetum {
+    position: block;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+
+  #InetumLyon {
+    position: block;
+    right: 0px;
+    width: 45%;
+    height: auto;
+  }
+
+  #stage2 {
+    position: block;
+    left: 0px;
+    width: 45%;
+    height: auto;
+  }
+
+  #bilan {
+    position: block;
+    left: 0px;
+    width: 45%;
+    height: auto;
+  }
+
+
+
+  #pro {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #projet {
+    position: block;
+    left: 0px;
+    width: 45%;
+    height: auto;
+  }
+
+  
+
+  .InetumLyon {
+    display: flex; /* Utilise Flexbox pour aligner les éléments côte à côte */
+    align-items: center; /* Aligne verticalement au centre */
+}
+
+#InetumLyon {
+    margin-right: 20px; /* Espace entre le texte et l'image */
+}
+
+#flex_office {
+    width: 800px; /* Ajustez la largeur de l'image selon vos besoins */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+}
+
+
+
+
+
+  /* Styles pour la section .veille */
+.veille {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem 0;
+  }
+  
+  .veille h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .veille .vei {
+    margin-top: 1rem;
+  }
+  
+  .veille .ev1,
+  .veille .ev2 {
+    background: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .veille h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .veille p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .veille img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  
+  
+  /* Réglage de l'espacement des colonnes dans le pied de page pour les petits écrans */
+  @media (max-width: 768px) {
+    .footer .col-md-6 {
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+  }
+
+  
+
+
+
+
+  /* Styles pour la section #annee2 */
+#annee2 {
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem 0;
+  }
+  
+  #annee2 h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+
+
+
+  
+
+
+  /* Styles spécifiques pour le pied de page */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0; /* Réduit le padding pour une apparence plus compacte */
+  }
+  
+  .footer h3 {
+    color: #fff;
+    font-size: 1.75rem; /* Ajuste la taille de police pour les titres */
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer p {
+    font-size: 1rem; /* Réduit légèrement la taille de la police des paragraphes */
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none; /* Retire la décoration des liens pour un style plus propre */
+  }
+  
+  .footer a:hover {
+    color: lightblue; /* Ajoute une couleur au survol pour les liens */
+  }
+  
+
+
+
+
+
+  /* Ajustements pour la responsivité */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .navbar a {
+      margin: 0.5rem 0;
+    }
+  
+    #annee2 {
+      padding: 1rem;
+    }
+  
+    .footer .row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer .col-md-6 {
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+

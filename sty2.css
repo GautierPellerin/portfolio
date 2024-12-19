@@ -1,0 +1,187 @@
+/* Réinitialisation des styles par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles généraux du corps du document */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: rgb(0, 0, 0); /* Couleur de fond gris clair */
+  color: #333;
+}
+
+/* En-tête */
+header {
+  background: rgb(0, 0, 0); /* Couleur de fond blanc */
+  color: #333;
+  padding: 1rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  background: white; /* Couleur de fond blanc */
+}
+
+.navbar a.active,
+.navbar a:hover {
+  background: #aaaaaa; /* Couleur de fond gris très clair */
+}
+
+/* Section d'accueil */
+#accueil {
+  padding: 2rem;
+  text-align: center;
+  background: #aaaaaa; /*Couleur de fond gris clair */
+}
+
+.accueil h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: black; /* Couleur de fond noir */
+}
+
+.accueil h3 {
+  font-size: 1.5rem;
+  color: black; /* Couleur de fond gris foncé */
+  margin-bottom: 1rem;
+}
+
+.accueil p {
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+.accueil button {
+  background-color: #333; /* Couleur de fond noir */
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.accueil button:hover {
+  background-color: #666; /* Couleur de fond gris foncé */
+}
+
+/* Section qu'est ce que le BTS SIO ? */
+.qu {
+  padding: 2rem;
+  background: #f7f7f7; /* Couleur de fond gris clair */
+  margin: 1rem 0;
+}
+
+.qu h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #333; /* Couleur de fond noir */
+  padding-bottom: 0.5rem;
+}
+
+.qu p {
+  margin-bottom: 1rem;
+}
+
+/* Section BTS SISR et SLAM */
+.BTS {
+  padding: 2rem;
+  background: #f7f7f7; /* Couleur de fond gris clair */
+}
+
+.BTS h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #666; /* Couleur de fond gris foncé */
+}
+
+.BTS p {
+  margin-bottom: 1rem;
+}
+
+.SISR, .SLAM {
+  background: #f7f7f7; /* Couleur de fond gris clair */
+  padding: 1rem;
+  border: 1px solid #333; /* Couleur de fond noir */
+  margin-bottom: 1rem;
+}
+
+/* Pied de page */
+.footer {
+  background-color: black; /* Couleur de fond noir */
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer h3 {
+  color: #fff;
+  font-size: 20px;
+}
+
+.footer p {
+  font-size: 16px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-md-6 {
+  width: 48%;
+  margin: 10px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: lightblue;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a {
+    margin: 0.5rem 0;
+  }
+
+  #accueil {
+    padding: 1rem;
+  }
+}
+
+/* Ajout d'effets de survol pour les sections */
+.BTS section:hover {
+  transform: translateY(-10px); /* Fait surélever la section de 10px */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre pour un effet plus réaliste */
+}
+
+.qu:hover {
+  transform: translateY(-10px); /* Fait surélever la section de 10px */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre pour un effet plus réaliste */
+}
+
+/* ... (le reste du code CSS) */
