@@ -32,35 +32,29 @@
                 <h2>Mon stage</h2>
                 <article id="sta">
                     
-                    <div id="presInetum">
-                        <div>
-                            <img src="inetum.png" alt="image" id="inetum">
+                    <div id="stage2">
+                        <h3>Mon Stage</h3>
+                        <p>J'ai eu pour mission de faire évoluer une application web existante pour quelle fonctionne pour des bases de données d'un nouveau format.</p>
+                    </div>
+                    <div id="pro">
+                        <div id="projet">
+                            <h3>Mon Projet</h3>
+                            <p>J'ai créé une application web permettant de démarer ou d'arrêter une base de donnée à distance.</p>
                         </div>
-                        <div>
-                            <h3>Présentation d'Inetum Software</h3>
-                            <p><i class='bx bxs-trophy'></i> Leader européen des services numériques.</p>
-                            <p><i class='bx bx-body' ></i> 28 000 consultants et spécialistes</p>
-                            <p><i class='bx bx-buildings' ></i> Au service des entreprises, acteurs publics et société</p>
-                            <p><i class='bx bx-world' ></i> Présent dans 19 pays</p>
-                            <p><i class='bx bxs-dollar-circle' ></i> Chiffre d’affaires de 2,5 milliards d’euros en 2023.</p>
+                        <div class="projet">
+                            <img src="accueil_visubase.png" alt="image">
+                            <img src="base_visubase.png" alt="image">
+                            <img src="ajouter_visubase.png" alt="image">
+                            <img src="modifier_visubase.png" alt="image">
+                            <button class="arrow-left">&#10094;</button>
+                            <button class="arrow-right">&#10095;</button>
                         </div>
                     </div>
-                    <div class="InetumLyon">
-                        <div id="InetumLyon">
-                            <h3>Inetum Software Lyon</h3>
-                            <p>Etant un des multiples bureaux d'Inetum Software, ce flex-office accueil divers secteurs d'activitées ainsi que plusieurs équipes.
-                                Durant ce stage, j'étais sous la tutelle de l'équipe de test de Lyon.
-                            </p>
-                        </div>
-                        <div>
-                            <img src="flex_office.jpg" alt="image" id="flex_office">
-                        </div>
-                    </div>
-                    <div>
-                        <a href="stage1.html">Stage 1</a>
-                    </div>
-                    <div>
-                        <a href="stage2.html">Stage 2</a>
+                    <div id="bilan">
+                        <h3>Bilan Personnel</h3>
+                        <p>Ce stage a été très enrichissant car j'ai découvert un projet d'entreprise existant.
+                            De plus, j'ai pu recommencer ce projet de 0 avec ma vision mais aussi avec des demandes précises de l'entreprise.
+                        </p>
                     </div>
                 </article>
             </section>
@@ -87,5 +81,24 @@
             </div>
         </div>
     </footer>
+    <script>
+        const images = document.querySelectorAll('.projet img');
+        let currentImageIndex = 0;
+    
+        document.querySelector('.arrow-left').addEventListener('click', () => {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+            images[currentImageIndex].classList.add('active');
+        });
+    
+        document.querySelector('.arrow-right').addEventListener('click', () => {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+            images[currentImageIndex].classList.add('active');
+        });
+    
+        // Initialiser la première image
+        images[currentImageIndex].classList.add('active');
+    </script>
     
 </html>
