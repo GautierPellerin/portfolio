@@ -8,7 +8,7 @@
         <title>Mon Portfolio</title>
         <meta charset="UTF-8">
         <!-- Lien vers le fichier de style CSS -->
-        <link href="sty2.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="./css/inv.css" rel="stylesheet" type="text/css" media="screen">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
         <header>
             <!-- Barre de Navigation -->
             <div class="navbar">
-                <a class="active" href="accueil.html">Accueil</a>
+                <a class="active" href="index.html">Accueil</a>
                 <a href="annee1.html">Première Année</a>
                 <a href="annee2.html">Deuxième Année</a>
                 <a href="stage.html">Stage</a>
@@ -28,34 +28,83 @@
         <div id="accueil">
             <section class="accueil">
                 <h1>PELLERIN Gautier</h1>
-                <h3>Apprenti Développeur</h3>
                 <p>Bonjour, je m'appelle Gautier Pellerin et je suis étudiant en première année de 
                     BTS SIO et j'ai choisi l'option SLAM</p>
                 <a href="CV informatique.pdf" download="CV_PELLERIN_Gautier.pdf">
                     <button>Mon CV</button>
                 </a>
             </section>
-            <section class="qu">
-                <h2>Qu'est ce que le BTS SIO ?</h2>
-                <p>Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations, s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau ou de développeur. Pour par la suite intégrer directement le marché du travail ou continuer des études, dans le domaine de l'informatique.</p>
-            </section>
-            <section class="BTS">
-                <section class="SISR">
-                    <h3>Option SISR</h3>
-                    <p>L’acronyme SISR signifie « Solutions d’infrastructure, systèmes et réseaux ».</p>
-                    <p> Voici des précisions sur cette formation et ses débouchés.</p>
-                    <p>L’option SISR est destinée aux étudiants qui s’orientent vers les métiers liés à la conception et la maintenance d’infrastructures réseaux. Assurer la sécurité, la maintenance et l’installation des réseaux et des équipements informatiques font partie des principales missions des futurs administrateurs, techniciens ou pilotes d’exploitation.</p>
-                    <p>Des cours plus généraux viendront compléter la formation et apporter des compétences plus généralistes, permettant ainsi aux diplômés d’être opérationnels dans n’importe quelle entreprise.</p>
-                </section>
-                <section class="SLAM">
-                    <h3>Option SLAM</h3>
-                    <p>Le signe SLAM signifie « Solutions Logicielles et Applications Métier ».</p>
-                    <p>Voici quelques indications sur cette seconde option du BTS SIO, ainsi des précisions sur cette formation et ses débouchés.</p>
-                    <p>L’option SLAM est destinée aux étudiants qui s’orientent vers les métiers liés à la conception et la maintenance de programmes applicatifs. Grâce à des cours spécifiques, les diplômés seront capables de gérer un parc informatique ou d’administrer un réseau au sein d’une entreprise.</p>
-                    <p>Ils pourront également gérer l’intégration, la sécurisation et la configuration des serveurs, mais aussi des postes clients et des équipements d’interconnexion.</p>
-                </section>
+        </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
+        <div id="competences">
+            <section class="competences">
+                <h2>Mes Compétences</h2>
+                <div class="cards-container">
+                    <!-- Carte 1 : HTML -->
+                    <div class="card">
+                        <img src="./img/HTML.jfif" alt="HTML Logo">
+                        <h3>HTML</h3>
+                        <p>Langage de balisage utilisé pour structurer le contenu des pages web.</p>
+                    </div>
+                    
+                    <!-- Carte 2 : CSS -->
+                    <div class="card">
+                        <img src="./img/CSS.png" alt="CSS Logo">
+                        <h3>CSS</h3>
+                        <p>Langage de feuille de style pour la présentation et la mise en forme des pages web.</p>
+                    </div>
+        
+                    <!-- Carte 3 : JavaScript -->
+                    <div class="card">
+                        <img src="./img/JavaScript.png" alt="JavaScript Logo">
+                        <h3>JavaScript</h3>
+                        <p>Langage de programmation côté client pour rendre les pages web interactives.</p>
+                    </div>
+        
+                    <!-- Carte 4 : Node.js -->
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="Node.js Logo">
+                        <h3>Node.js</h3>
+                        <p>Environnement d'exécution JavaScript côté serveur, permettant des applications rapides et évolutives.</p>
+                    </div>
+        
+                    <!-- Carte 5 : SQL -->
+                    <div class="card">
+                        <img src="./img/SQL.webp" alt="SQL Logo">
+                        <h3>SQL</h3>
+                        <p>Langage de gestion de bases de données pour effectuer des requêtes et manipuler les données.</p>
+                    </div>
+        
+                    <!-- Carte 6 : Git -->
+                    <div class="card">
+                        <img src="./img/GitHub.png" alt="Git Logo">
+                        <h3>Github</h3>
+                        <p>Système de contrôle de version permettant de suivre les modifications du code source.</p>
+                    </div>
+        
+                    <!-- Carte 7 : Python -->
+                    <div class="card">
+                        <img src="./img/Python.png" alt="Python Logo">
+                        <h3>Python</h3>
+                        <p>Langage de programmation polyvalent, idéal pour le développement web, l'IA et l'automatisation.</p>
+                    </div>
+        
+                    <!-- Carte 8 : React -->
+                    <div class="card">
+                        <img src="https://via.placeholder.com/150" alt="React Logo">
+                        <h3>React</h3>
+                        <p>Bibliothèque JavaScript pour la construction d'interfaces utilisateur dynamiques.</p>
+                    </div>
+                </div>
             </section>
         </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
     </body>
     <footer class="footer">
         <div class="container">
