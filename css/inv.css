@@ -9,7 +9,7 @@
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #F1F1F1;
+    background-color: #f8f8ff;
     color: #333;
   }
   
@@ -26,57 +26,173 @@
   }
   
   .navbar a {
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;
     font-weight: bold;
     border-radius: 5px;
-    background: white; /* Couleur de fond blanc */
+    background: #003366; /* Couleur de fond blanc */
   }
   
   .navbar a.active,
   .navbar a:hover {
-    background: #aaaaaa; /* Couleur de fond gris très clair */
+    background: lightblue; /* Couleur de fond gris très clair */
+  }
+
+
+
+
+
+
+
+
+  
+/* Section d'accueil */
+#accueil {
+  padding: 2rem;
+  text-align: center;
+  background: #f8f8ff; /* Couleur de fond gris clair (blanc légèrement bleuté) */
+}
+
+/* Titre principal */
+.accueil h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #003366; /* Couleur bleu foncé pour un aspect professionnel */
+}
+
+/* Description */
+.accueil p {
+  font-size: 1.125rem; /* Taille de police plus grande pour la lecture */
+  color: #333333; /* Texte en gris foncé pour une meilleure lisibilité */
+  margin-bottom: 1.5rem;
+  line-height: 1.6; /* Espacement entre les lignes pour améliorer la lisibilité */
+}
+
+/* Bouton */
+.accueil button {
+  background-color: #003366; /* Couleur de fond bleu foncé */
+  color: #fff; /* Texte en blanc */
+  border: none;
+  padding: 0.75rem 2rem; /* Plus de padding pour un bouton plus large */
+  font-size: 1.2rem; /* Taille du texte du bouton légèrement plus grande */
+  cursor: pointer;
+  border-radius: 8px; /* Bord arrondi plus accentué */
+  transition: background-color 0.3s ease; /* Transition pour l'effet hover */
+}
+
+/* Effet au survol du bouton */
+.accueil button:hover {
+  background-color: #00509e; /* Couleur bleu clair lorsqu'on survole */
+}
+
+/* Ajout d'un peu d'espace autour de la section */
+.accueil {
+  max-width: 800px;
+  margin: 0 auto; /* Centrer la section sur la page */
+  padding: 2rem;
+  background-color: #fff; /* Fond blanc pour le contenu */
+  border-radius: 8px; /* Bords arrondis */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+
+
+
+
+
+/* Section du parcours scolaire */
+#parcours-scolaire {
+  padding: 2rem 1.5rem;
+  background-color: #ffffff; /* Fond blanc propre pour une apparence plus épurée */
+  border-radius: 12px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Ombre plus douce et marquée */
+  margin: 3rem auto;
+  max-width: 950px;
+  border: 1px solid #e0e0e0; /* Ajout d'une légère bordure pour délimiter la section */
+}
+
+/* Titre principal du parcours scolaire */
+#parcours-scolaire h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #003366; /* Bleu foncé mais vibrant */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase; /* Capitalisation pour un effet moderne */
+  letter-spacing: 2px; /* Espacement des lettres pour une meilleure lisibilité */
+}
+
+/* Conteneur des formations */
+.parcours {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Plus d'espace entre les éléments */
+  padding: 0 1rem;
+}
+
+/* Détail des formations */
+.formation {
+  background-color: #ffffff; /* Fond blanc */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Ombre plus douce pour une touche plus moderne */
+  transition: all 0.3s ease; /* Animation au survol */
+}
+
+.formation:hover {
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15); /* Effet de survol pour moderniser l'interaction */
+  transform: translateY(-5px); /* Léger déplacement pour l'effet visuel */
+}
+
+/* Titres des formations */
+.formation h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 0.8rem;
+  text-transform: capitalize; /* Pour donner une touche plus fluide aux titres */
+  letter-spacing: 1px;
+}
+
+/* Détails des formations */
+.formation p {
+  font-size: 1rem;
+  color: #666; /* Gris moyen pour un texte plus lisible */
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+/* Style spécifique pour la formation en cours */
+.en-cours {
+  border-left: 5px solid #003366; /* Bordure plus marquée pour la formation en cours */
+  padding-left: 1.5rem;
+  background-color: #f0f8ff; /* Légère teinte bleutée pour mettre en évidence */
+}
+
+/* Responsive design pour mobile */
+@media (max-width: 768px) {
+  #parcours-scolaire {
+    padding: 1.5rem 1rem;
+  }
+
+  .formation h3 {
+    font-size: 1.4rem; /* Taille de texte réduite pour une meilleure lisibilité sur mobile */
+  }
+
+  .formation p {
+    font-size: 0.95rem; /* Légère réduction de la taille du texte */
   }
   
-  /* Section d'accueil */
-  #accueil {
-    padding: 2rem;
-    text-align: center;
-    background: #f8f8ff; /*Couleur de fond gris clair */
+  .parcours {
+    padding: 0;
   }
-  
-  .accueil h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: black; /* Couleur de fond noir */
-  }
-  
-  .accueil h3 {
-    font-size: 1.5rem;
-    color: black; /* Couleur de fond gris foncé */
-    margin-bottom: 1rem;
-  }
-  
-  .accueil p {
-    color: black;
-    margin-bottom: 1.5rem;
-  }
-  
-  .accueil button {
-    background-color: #333; /* Couleur de fond noir */
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .accueil button:hover {
-    background-color: #666; /* Couleur de fond gris foncé */
-  }
+}
+
+
+
 
 
 
@@ -107,8 +223,7 @@
 
 /* Style de chaque carte */
 .card {
-    background-color: #fffff0;
-    border: 1px solid #e1e1e1;
+    background-color: #f0f8ff;
     border-radius: 10px;
     width: 250px;
     padding: 20px;
@@ -208,7 +323,7 @@
 
   /* Style pour le trait noir entre les sections */
 .trait {
-    width: 70%;  /* Prendre 70% de la largeur de la page */
+    width: 80%;  /* Prendre 70% de la largeur de la page */
     height: 2px; /* Hauteur de la ligne */
     background-color: #000; /* Couleur noire */
     margin: 40px auto; /* Centrer la ligne et ajouter un peu de marge autour */
