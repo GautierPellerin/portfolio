@@ -8,78 +8,54 @@
         <title>Mon Portfolio</title>
         <meta charset="UTF-8">
         <!-- Lien vers le fichier de style CSS -->
-        <link href="./css/sty.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="./css/stage1.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="./css/general.css" rel="stylesheet" type="text/css" media="screen">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <!-- En Tête -->
-        <header>
-            <!-- Barre de Navigation -->
-            <div class="navbar">
-                <a href="index.html">Accueil</a>
-                <a href="annee1.html">Première Année</a>
-                <a href="annee2.html">Deuxième Année</a>
-                <a class="active" href="stage.html">Stage</a>
-                <a href="veille.html">Veille</a>
-            </div>
-        </header>
+        <iframe src="stage.html?activePage=stage.html" frameborder="0" style="width: 100%; height: 100px;"></iframe>
         
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
         <div id="stage">
-            <section>
-                <h2>Mon stage</h2>
-                <article id="sta">
-                    
-                    <div id="stage2">
-                        <h3>Mon Stage</h3>
-                        <p>J'ai eu pour mission un objectif à réaliser sous forme de projet pour lequel j'avais carte blanche sur la façon d'ont je le faisais. 
-                            Cependant je devais faire un rapport toutes les semaines pour vérifier l'avancement du projet.</p>
-                    </div>
-                    <div id="pro">
-                        <div id="projet">
-                            <h3>Mon Projet</h3>
-                            <p>J'ai créé une page web réunissant les applications à tester selon leur environnement.</p>
-                        </div>
-                        <div class="projet">
-                            <img src="./img/Site.PNG" alt="image">
-                            <img src="./img/Env.PNG" alt="image">
-                            <button class="arrow-left">&#10094;</button>
-                            <button class="arrow-right">&#10095;</button>
-                        </div>
-                    </div>
-                    <div id="bilan">
-                        <h3>Bilan Personnel</h3>
-                        <p>Ce stage a été très enrichissant car j'ai découvert le travail et le monde de l'entreprise.
-                            De plus, j'ai eu la chance de faire un projet avec ma vision des choses et une liberté presque totale.
-                        </p>
-                    </div>
-                </article>
-            </section>
+            <h3>Mon Stage</h3>
+            <p>J'ai eu pour mission un objectif à réaliser sous forme de projet pour lequel j'avais carte blanche sur la façon d'ont je le faisais. 
+                Cependant je devais faire un rapport toutes les semaines pour vérifier l'avancement du projet.</p>
+        </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
+        <div id="pro">
+            <div id="projet">
+                <h3>Mon projet</h3>
+                <p>J'ai créé une page web réunissant les applications à tester selon leur environnement.</p>
+            </div>
+            <div class="projet">
+                <img src="./img/Site.PNG" alt="image">
+                <img src="./img/Env.PNG" alt="image">
+                <button class="arrow-left">&#10094;</button>
+                <button class="arrow-right">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
+        <div id="bilan">
+            <h3>Bilan Personnel</h3>
+            <p>Ce stage a été très enrichissant car j'ai découvert le travail et le monde de l'entreprise.
+                De plus, j'ai eu la chance de faire un projet avec ma vision des choses et une liberté presque totale.
+            </p>
         </div>
     </body>
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Mon Portfolio</h3>
-                    <p>Je vous remercie d'avoir pris le temps de visiter mon Portfolio, bonne continuation.</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>Contact</h3>
-                    <p>Nom : PELLERIN Gautier</p>
-                    <p>Email : gautier.pellerin@ellabts.com</p>
-                    <p>Téléphone : +33 6 42 57 54 90</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>Mes Réseaux</h3>
-                    <p><a href="https://www.linkedin.com/in/gautier-pellerin-335a9a1ba">LinkedIn</a></p>
-                    <p><a href="https://github.com/GautierPellerin">Github</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
+    <!-- Trait noir entre les sections -->
+    <div class="trait"></div>
+    <iframe src="footer.html" id="footer-iframe" style="width:100%; height:240px; border:none; bottom: 0; left: 0;"></iframe>
     <script>
         const images = document.querySelectorAll('.projet img');
         let currentImageIndex = 0;

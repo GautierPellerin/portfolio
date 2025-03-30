@@ -1,7 +1,8 @@
 /* Section d'accueil */
-#accueil {
+.accueil {
   padding: 2rem;
   text-align: center;
+  justify-content: center; /* Centrer horizontalement */
   background: #f8f8ff; /* Couleur de fond gris clair (blanc légèrement bleuté) */
 }
 
@@ -11,6 +12,7 @@
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
   color: #003366; /* Couleur bleu foncé pour un aspect professionnel */
+  text-align: center;
 }
 
 /* Description */
@@ -19,6 +21,7 @@
   color: #333333; /* Texte en gris foncé pour une meilleure lisibilité */
   margin-bottom: 1.5rem;
   line-height: 1.6; /* Espacement entre les lignes pour améliorer la lisibilité */
+  text-align: center;
 }
 
 /* Bouton */

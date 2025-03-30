@@ -8,69 +8,52 @@
         <title>Mon Portfolio</title>
         <meta charset="UTF-8">
         <!-- Lien vers le fichier de style CSS -->
-        <link href="sty.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="./css/general.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="./css/veille.css" rel="stylesheet" type="text/css" media="screen">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!-- En Tête -->
-        <header>
-            <!-- Barre de Navigation -->
-            <div class="navbar">
-                <a href="index.html">Accueil</a>
-                <a href="annee1.html">Première Année</a>
-                <a href="annee2.html">Deuxième Année</a>
-                <a href="stage.html">Stage</a>
-                <a class="active" href="veille.html">Veille</a>
-            </div>
-        </header>
+        <iframe src="navbar.html?activePage=veille.html" frameborder="0" style="width: 100%; height: 100px;"></iframe>
         
-        <section class="veille">
-            <h2>Ma veille technologique</h2>
-            <section class="vei">
-                <section class="ev1">
-                    <h3>1. L’ascension irrésistible de ChatGPT</h3>
-                    <p>2022 a été l’année du lancement public de l’agent conversationnel conçu par OpenAI.</p> 
-                    <p>2023 a indéniablement été celle où le chatbot a pris son envol, bien loin devant la concurrence.</p> 
-                    <p>Ce n’est pas faute pour elle d’avoir essayé de riposter, à l’image de Google et de sa solution-maison, Bard, puis avec l’arrivée d’un nouveau modèle de langage, Gemini. </p>
-                    <p>Aujourd’hui, ChatGPT « survole le game », comme on dit. </p>
-                    <p>Tout le monde s’en sert et l’outil s’est régulièrement amélioré, avec la sortie de GPT-4 au printemps puis GPT-4 Turbo à l’automne.</p>
-                    <!--<img src="chatgpt.jpeg" alt="image">-->
-                </section>
-                <section class="ev2">
-                    <h3>2. L’Europe met au pas les géants du net</h3>
-                    <p>Trois lettres pour un acronyme. </p>
-                    <p>DSA, ou le Digital Services Act, est entré en vigueur le 25 août pour les très grandes plateformes du numérique. </p>
-                    <p>Comprendre les Google, Amazon, Facebook, TikTok, X (Twitter) et autres LinkedIn. </p>
-                    <p>Ce règlement sur les services numériques de l’Union européenne imposent à ces géants du net des règles actualisées, qu’il vaut mieux respecter sous peine de sanctions potentiellement très fortes. </p>
-                    <p>En 2024, le DSA s’appliquera à tout le monde et plus qu’aux seuls poids lourds d’Internet.</p>
-                    <!--<img src="europe.jpg" alt="image">-->
-                </section>
-            </section>
-        </section>
+        <h3>Le BigData</h3>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
+        <div class="div">
+            <h3>Salon Big Data & AI Paris 2023</h3>
+            <p>Les 25 et 26 septembre 2023, le Palais des Congrès de Paris a accueilli la 12ᵉ édition de ce salon, réunissant plus de 16 000 professionnels. L'événement a mis en lumière les dernières avancées en matière d'intelligence artificielle et de Big Data, avec plus de 350 conférences et ateliers animés par 700 intervenants.</p>
+        </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
+        <div class="div">
+            <h3>Intelligence Artificielle Générative (GenAI)</h3>
+            <p>Le salon a particulièrement mis en avant l'IA Générative, reflétant un intérêt croissant pour cette technologie. Des entreprises comme Sanofi ont partagé leurs expériences sur l'utilisation de la science des données pour optimiser leur chaîne d'approvisionnement.</p>
+        </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
+        <div class="div">
+            <h3>Rapport Draghi sur l'IA</h3>
+            <p>En octobre 2024, Mario Draghi a publié un rapport recommandant de renforcer les investissements et d'alléger la régulation en Europe pour stimuler l'innovation en IA. Ce rapport a été bien accueilli par les start-up européennes et les géants américains de la tech, bien que certaines mesures aient suscité des débats.</p>
+        </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
+        <div class="div">
+            <p>Ces développements illustrent l'importance croissante du Big Data et de l'IA dans divers secteurs, tout en mettant en évidence les défis liés à la régulation et à l'innovation technologique.</p>
+        </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
 
     </body>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Mon Portfolio</h3>
-                    <p>Je vous remercie d'avoir pris le temps de visiter mon Portfolio, bonne continuation.</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>Contact</h3>
-                    <p>Nom : PELLERIN Gautier</p>
-                    <p>Email : gautier.pellerin@ellabts.com</p>
-                    <p>Téléphone : +33 6 42 57 54 90</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>Mes Réseaux</h3>
-                    <p><a href="https://www.linkedin.com/in/gautier-pellerin-335a9a1ba">LinkedIn</a></p>
-                    <p><a href="https://github.com/GautierPellerin">Github</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <iframe src="footer.html" id="footer-iframe" style="width:100%; height:240px; border:none; bottom: 0; left: 0;"></iframe>
 </html>

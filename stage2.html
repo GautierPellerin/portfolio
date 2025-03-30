@@ -8,97 +8,105 @@
         <title>Mon Portfolio</title>
         <meta charset="UTF-8">
         <!-- Lien vers le fichier de style CSS -->
-        <link href="./css/sty.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="./css/general.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="./css/stage2.css" rel="stylesheet" type="text/css" media="screen">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <!-- En Tête -->
-        <header>
-            <!-- Barre de Navigation -->
-            <div class="navbar">
-                <a href="index.html">Accueil</a>
-                <a href="annee1.html">Première Année</a>
-                <a href="annee2.html">Deuxième Année</a>
-                <a class="active" href="stage.html">Stage</a>
-                <a href="veille.html">Veille</a>
-            </div>
-        </header>
+        <iframe src="stage.html?activePage=stage.html" frameborder="0" style="width: 100%; height: 100px;"></iframe>
         
-        <div id="stage">
-            <section>
-                <h2>Mon stage</h2>
-                <article id="sta">
                     
-                    <div id="stage2">
-                        <h3>Mon Stage</h3>
-                        <p>J'ai eu pour mission de faire évoluer une application web existante pour quelle fonctionne pour des bases de données d'un nouveau format.</p>
-                    </div>
-                    <div id="pro">
-                        <div id="projet">
-                            <h3>Mon Projet</h3>
-                            <p>J'ai créé une application web permettant de démarer ou d'arrêter une base de donnée à distance.</p>
-                        </div>
-                        <div class="projet">
-                            <img src="./img/accueil_visubase.png" alt="image">
-                            <img src="./img/base_visubase.png" alt="image">
-                            <img src="./img/ajouter_visubase.png" alt="image">
-                            <img src="./img/modifier_visubase.png" alt="image">
-                            <button class="arrow-left">&#10094;</button>
-                            <button class="arrow-right">&#10095;</button>
-                        </div>
-                    </div>
-                    <div id="bilan">
-                        <h3>Bilan Personnel</h3>
-                        <p>Ce stage a été très enrichissant car j'ai découvert un projet d'entreprise existant.
-                            De plus, j'ai pu recommencer ce projet de 0 avec ma vision mais aussi avec des demandes précises de l'entreprise.
-                        </p>
-                    </div>
-                </article>
-            </section>
+        <div id="stage2">
+            <h3>Mon Stage</h3>
+            <p>J'ai eu pour mission de faire évoluer une application web existante pour quelle fonctionne pour des bases de données d'un nouveau format.</p>
+        </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
+        <div id="pro">
+            <div id="projet">
+                <h3>Mon Projet</h3>
+                <p>J'ai créé une application web permettant de démarer ou d'arrêter une base de donnée à distance.</p>
+            </div>
+            <div class="projet">
+                <img src="./img/accueil_visubase.png" alt="image">
+                <img src="./img/base_visubase.png" alt="image">
+                <img src="./img/ajouter_visubase.png" alt="image">
+                <img src="./img/modifier_visubase.png" alt="image">
+                <button class="arrow-left">&#10094;</button>
+                <button class="arrow-right">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
+        <div id="bilan">
+            <h3>Bilan Personnel</h3>
+            <p>Ce stage a été très enrichissant car j'ai découvert un projet d'entreprise existant.
+                De plus, j'ai pu recommencer ce projet de 0 avec ma vision mais aussi avec des demandes précises de l'entreprise.
+            </p>
         </div>
     </body>
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Mon Portfolio</h3>
-                    <p>Je vous remercie d'avoir pris le temps de visiter mon Portfolio, bonne continuation.</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>Contact</h3>
-                    <p>Nom : PELLERIN Gautier</p>
-                    <p>Email : gautier.pellerin@ellabts.com</p>
-                    <p>Téléphone : +33 6 42 57 54 90</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>Mes Réseaux</h3>
-                    <p><a href="https://www.linkedin.com/in/gautier-pellerin-335a9a1ba">LinkedIn</a></p>
-                    <p><a href="https://github.com/GautierPellerin">Github</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
+    <!-- Trait noir entre les sections -->
+    <div class="trait"></div>
+    <iframe src="footer.html" id="footer-iframe" style="width:100%; height:240px; border:none; bottom: 0; left: 0;"></iframe>
+
+    <!-- Conteneur pour l'image agrandie -->
+    <div id="lightbox" class="lightbox">
+        <span id="close-lightbox" class="close-lightbox">&times;</span>
+        <img id="lightbox-image" class="lightbox-image" src="" alt="">
+    </div>
+
     <script>
         const images = document.querySelectorAll('.projet img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const closeLightbox = document.getElementById('close-lightbox');
         let currentImageIndex = 0;
-    
+
+        // Ajouter un événement au clic sur chaque image pour afficher dans la lightbox
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                // Afficher l'image dans la lightbox
+                lightboxImage.src = image.src;
+                lightbox.style.display = 'flex'; // Afficher la lightbox
+            });
+        });
+
+        // Fermer la lightbox lorsqu'on clique sur la croix
+        closeLightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        // Fermer la lightbox en cliquant en dehors de l'image
+        lightbox.addEventListener('click', (event) => {
+            if (event.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        // Gestion des flèches de navigation
         document.querySelector('.arrow-left').addEventListener('click', () => {
             images[currentImageIndex].classList.remove('active');
             currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
             images[currentImageIndex].classList.add('active');
         });
-    
+
         document.querySelector('.arrow-right').addEventListener('click', () => {
             images[currentImageIndex].classList.remove('active');
             currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
             images[currentImageIndex].classList.add('active');
         });
-    
+
         // Initialiser la première image
         images[currentImageIndex].classList.add('active');
+
     </script>
     
 </html>

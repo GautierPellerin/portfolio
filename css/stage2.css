@@ -1,0 +1,165 @@
+
+
+/* Section générale */
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #003366; /* Couleur bleu foncé */
+    text-align: center;
+}
+
+/* Conteneur principal */
+#stage2, #pro, #bilan {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* Section Stage */
+#stage2 {
+    text-align: center;
+}
+
+#stage2 p {
+    font-size: 1.125rem;
+    color: #333333;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* Section Projet */
+#pro {
+    padding: 2rem 1.5rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 3rem auto;
+    max-width: 950px;
+    border: 1px solid #e0e0e0;
+}
+
+#pro #projet h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #003366; /* Couleur bleu foncé */
+    text-align: center;
+}
+
+#pro .projet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#pro #projet p{
+    font-size: 1.125rem;
+    color: #333333;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#pro .projet img {
+    max-width: 100%;
+    height: auto;
+    display: none; /* Initialement, toutes les images sont invisibles */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#pro .projet img.active {
+    display: block; /* L'image active est la seule visible */
+}
+
+#pro .projet button {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #003366;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#pro .projet button.arrow-left {
+    left: 0;
+}
+
+#pro .projet button.arrow-right {
+    right: 0;
+}
+
+
+
+/* Section Bilan Personnel */
+#bilan h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #003366; /* Couleur bleu foncé */
+    text-align: center;
+}
+
+#bilan p {
+    font-size: 1.125rem;
+    color: #333333;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+
+/* Image responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+/* Lightbox - Image Agrandie */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre */
+    display: none; /* Cacher par défaut */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
