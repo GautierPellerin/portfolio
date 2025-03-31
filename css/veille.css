@@ -6,6 +6,13 @@ h3 {
     text-align: center;
 }
 
+img {
+    width: 600px; /* Augmenter la taille de l'image */
+    display: block; /* Transforme l'image en élément de type bloc */
+    margin: 0 auto; /* Centre l'image horizontalement */
+}
+
+
 
 .div {
     padding: 2rem;
