@@ -111,11 +111,23 @@
   .card {
     background-color: #ffffff;
     border-radius: 10px;
-    width: 48%; /* Les cartes occuperont 48% de l'espace */
+    width: 48%; /* Les cartes occupent 48% de l'espace */
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Pour aligner le contenu verticalement */
+    justify-content: space-between; /* Espacement entre les éléments */
+  }
+
+  
+  .card img {
+    width: 100%; /* L'image occupe toute la largeur de la carte */
+    height: auto; /* L'image garde ses proportions */
+    max-height: 200px; /* Limite la hauteur maximale de l'image */
+    object-fit: contain; /* Assure que l'image s'adapte sans déformation */
+    margin-top: 10px; /* Un peu d'espace au-dessus de l'image */
   }
   
   .card:hover {
@@ -132,6 +144,15 @@
   .cards-container a {
     text-decoration: none;
   }  
+
+  .cards-container p {
+    font-size: 1rem;
+    color: #000000; /* Noir */
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+
   
   /* Responsive design */
   @media (max-width: 768px) {
