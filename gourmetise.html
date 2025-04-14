@@ -20,10 +20,18 @@
         <div id="gourmetise">
             <h3>Objectif</h3>
             <p>Créer un concours de la meilleure boulangerie avec :</p>
-            <li>Une application Web</li>
-            <li>Une application Mobile</li>
-            <li>Une API</li>
+            <div class="contenu">
+                <ul>
+                    <li>Une application Web qui permet de s'inscrire en tant que boulangerie et de visualiser les résultats</li>
+                    <br>
+                    <li>Une application Mobile qui permet aux juges de récupérer la liste des boulangeries, de les noter et de remonter les notes</li>
+                    <br>
+                    <li>Une API</li>
+                </ul>
+                <img src="./img/gourmetise_architecture.png" alt="image" id="gourmetise_architecture">
+            </div>
         </div>
+        
 
         <!-- Trait noir entre les sections -->
         <div class="trait"></div>
@@ -56,13 +64,15 @@
 
         <div id="bilan">
             <h3>Bilan Personnel</h3>
-            <p>Ce projet m'a permis de voir comment mettre en place un projet</p>
+            <p>Ce projet m'a permis de voir comment mettre en place un projet qui contient plusieurs approches selon l'utilisateur. 
+                De plus, la création d'une API concrète était intéressant dans un tel contexte.</p>
         </div>
     </body>
     
     <!-- Trait noir entre les sections -->
     <div class="trait"></div>
-    <iframe src="footer.html" id="footer-iframe" style="width:100%; height:240px; border:none; bottom: 0; left: 0;"></iframe>
+
+    <iframe src="./footer.html" id="footer-iframe" style="width:100%; height:240px; border:none; bottom: 0; left: 0;"></iframe>
 
     <!-- Conteneur pour l'image agrandie -->
     <div id="lightbox" class="lightbox">
@@ -72,7 +82,7 @@
 
     <script>
         const images = document.querySelectorAll('.projet img');
-        const images2 = document.querySelectorAll('#gestion_pro img');
+        const images2 = document.querySelectorAll(' img');
         const lightbox = document.getElementById('lightbox');
         const lightboxImage = document.getElementById('lightbox-image');
         const closeLightbox = document.getElementById('close-lightbox');

@@ -32,12 +32,27 @@ h3 {
     text-align: center;
 }
 
-#gourmetise li {
-    font-size: 1.125rem;
-    color: #333333;
-    margin-bottom: 1rem;
-    line-height: 1.6;
+#gourmetise .contenu {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; /* espace entre la liste et l’image */
+    gap: 20px;
+}
+
+#gourmetise ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: disc;
+    flex: 1; /* La liste prend tout l'espace restant */
     text-align: left;
+    margin-left: 10px;
+    margin: 20px;
+}
+
+#gourmetise_architecture {
+    max-width: 500px;
+    height: auto;
+    flex-shrink: 0; /* L’image garde sa taille et reste collée à droite */
 }
 
 
@@ -86,6 +101,7 @@ h3 {
 #gestion_pro img:hover {
     transform: scale(1.05); /* Agrandir légèrement l'image au survol */
 }
+
 
 
 
@@ -184,14 +200,13 @@ h3 {
 
 
 
+
+
 /* Image responsive */
 img {
     max-width: 100%;
     height: auto;
 }
-
-
-
 
 
 
@@ -223,4 +238,20 @@ img {
     font-size: 30px;
     cursor: pointer;
     z-index: 1001;
+}
+
+
+@media (max-width: 768px) {
+    #gourmetise .contenu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #gourmetise ul {
+        text-align: left;
+    }
+
+    #gourmetise_architecture {
+        margin-top: 1rem;
+    }
 }
