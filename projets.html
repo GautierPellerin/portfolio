@@ -1,6 +1,6 @@
 <!--
     PELLERIN Gautier le 07/03/2024
-    portfolio.html
+    projets.html
     Page HTML pour le portfolio du BTS SIO
 -->
 <html>
@@ -21,33 +21,50 @@
         <!-- Trait noir entre les sections -->
         <div class="trait"></div>
 
-        <div class="Scrabble">
-            <h3>Scrabble mode 2 joueurs</h3>
-            <p>Lors des cours, j'ai créé une application de Scrabble où deux joueurs s'affrontent et doivent donner un mot avec 7 lettres tirées au hasard. Chaque mot rapporte un certain nombre de points. A la fin des 10 tours, l'application affiche le nom du gagnant et les mots donnés par le gagnant.</p>
-            <img src="./img/Scrabble.png" alt="image">
-        </div>
-        
-        <!-- Trait noir entre les sections -->
-        <div class="trait"></div>
+        <div class="projets-container">
+            <div class="Scrabble">
+                <h3>Scrabble mode 2 joueurs</h3>
+                <p>Lors des cours, j'ai créé une application de Scrabble où deux joueurs s'affrontent et doivent donner un mot avec 7 lettres tirées au hasard. Chaque mot rapporte un certain nombre de points. A la fin des 10 tours, l'application affiche le nom du gagnant et les mots donnés par le gagnant.</p>
+                <img src="./img/Scrabble.png" alt="image">
+                <div class="tech-logos">
+                    <img src="./img/CSharp.png" alt="C# Logo">
+                    <img src="./img/GitHub.png" alt="Git Logo">
+                </div>
+            </div>
+            
 
-        <div class="multiburo">
-            <h3>Multiburo</h3>
-            <p>Pour un projet de première année, j'ai créé la base de donnée, le back-office et front-office. La société MULTIBURO souhaitait se doter d’une solution logicielle permettant de gérer la réservation des espaces de travail mis à disposition des clients (locataires). MULTIBURO dispose de 2 bâtiments fonctionnant de deux façons différentes.</p>
-            <img src="./img/img_multiburo.png" alt="image">
-        </div>
+            <div class="multiburo">
+                <h3>Multiburo</h3>
+                <p>Pour un projet de première année, j'ai créé la base de donnée, le back-office et front-office. La société MULTIBURO souhaitait se doter d’une solution logicielle permettant de gérer la réservation des espaces de travail mis à disposition des clients (locataires). MULTIBURO dispose de 2 bâtiments fonctionnant de deux façons différentes.</p>
+                <img src="./img/img_multiburo.png" alt="image">
+                <div class="tech-logos">
+                    <img src="./img/HTML.jfif" alt="HTML Logo">
+                    <img src="./img/CSS.png" alt="CSS Logo">
+                    <img src="./img/PHP.png" alt="PHP Logo">
+                    <img src="./img/CSharp.png" alt="C# Logo">
+                    <img src="./img/SQL.webp" alt="SQL Logo">
+                    <img src="./img/GitHub.png" alt="Git Logo">
+                </div>
+            </div>
 
-        <!-- Trait noir entre les sections -->
-        <div class="trait"></div>
 
-        <div class="Gourmetise">
-            <h3>Gourmetise</h3>
-            <img src="./img/LogoGourmetise.png" alt="image">
-            <p>L’entreprise La Gourmetise, a été fondée en 2010 par un groupe de passionnés de la 
-                gastronomie et de la boulangerie. Depuis sa création, La Gourmetise s'est engagée à 
-                promouvoir l'excellence dans le domaine de la boulangerie et de la pâtisserie. Sa mission est de 
-                célébrer l'art de la boulangerie en mettant en lumière les artisans talentueux qui créent des 
-                produits exceptionnels</p>
-            <a href="gourmetise.html">Voir plus</a>
+            <div class="Gourmetise">
+                <h3>Gourmetise</h3>
+                <p>L’entreprise La Gourmetise, a été fondée en 2010 par un groupe de passionnés de la 
+                    gastronomie et de la boulangerie. Depuis sa création, La Gourmetise s'est engagée à 
+                    promouvoir l'excellence dans le domaine de la boulangerie et de la pâtisserie. Sa mission est de 
+                    célébrer l'art de la boulangerie en mettant en lumière les artisans talentueux qui créent des 
+                    produits exceptionnels</p>
+                <img src="./img/gourmetise_architecture.png" alt="image">
+                <div class="tech-logos">
+                    <img src="./img/SQL.webp" alt="SQL Logo">
+                    <img src="./img/GitHub.png" alt="Git Logo">
+                    <img src="./img/Symfony.svg" alt="Symfony Logo">
+                    <img src="./img/vue-js.png" alt="Vue.js Logo">
+                    <img src="./img/Kotlin.jpg" alt="Kotlin Logo">
+                </div>
+                <a href="gourmetise.html">Voir plus</a>
+            </div>
         </div>
 
         <!-- Trait noir entre les sections -->
@@ -55,4 +72,45 @@
 
         <iframe src="footer.html" id="footer-iframe" style="width:100%; height:240px; border:none; bottom: 0; left: 0;"></iframe>
     </body>
+
+    <!-- Conteneur pour l'image agrandie -->
+    <div id="lightbox" class="lightbox">
+        <span id="close-lightbox" class="close-lightbox">&times;</span>
+        <img id="lightbox-image" class="lightbox-image" src="" alt="">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.projets-container img[alt="image"]');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const closeLightbox = document.getElementById('close-lightbox');
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                // Afficher l'image dans la lightbox
+                lightboxImage.src = image.src;
+                lightbox.style.display = 'flex'; // Afficher la lightbox
+                lightbox.classList.add('show'); // Ajouter la classe "show" pour le fade-in
+            });
+        });
+
+        // Fermer la lightbox lorsqu'on clique sur la croix
+        closeLightbox.addEventListener('click', () => {
+            lightbox.classList.remove('show'); // Enlever la classe "show" pour cacher avec fade-out
+            setTimeout(() => {
+                lightbox.style.display = 'none'; // Après l'animation, cacher la lightbox
+            }, 300); // Temps de transition (0.3s)
+        });
+
+        // Fermer la lightbox en cliquant en dehors de l'image
+        lightbox.addEventListener('click', (event) => {
+            if (event.target === lightbox) {
+                lightbox.classList.remove('show'); // Enlever la classe "show"
+                setTimeout(() => {
+                    lightbox.style.display = 'none'; // Après l'animation, cacher la lightbox
+                }, 300); // Temps de transition
+            }
+        });
+
+    </script>
 </html>

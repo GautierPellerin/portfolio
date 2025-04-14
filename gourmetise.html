@@ -1,0 +1,129 @@
+<!--
+    PELLERIN Gautier le 14/04/2025
+    gourmetise.html
+    Page HTML pour le portfolio du BTS SIO
+-->
+<html>
+    <head>
+        <title>Mon Portfolio</title>
+        <meta charset="UTF-8">
+        <!-- Lien vers le fichier de style CSS -->
+        <link href="./css/general.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="./css/gourmetise.css" rel="stylesheet" type="text/css" media="screen">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+                    
+        <div id="gourmetise">
+            <h3>Objectif</h3>
+            <p>Créer un concours de la meilleure boulangerie avec :</p>
+            <li>Une application Web</li>
+            <li>Une application Mobile</li>
+            <li>Une API</li>
+        </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
+        <div id="gestion_pro">
+            <h3>Gestion du projet</h3>
+            <div>
+                <img src="./img/trello.png" alt="image" id="trello">
+                <img src="./img/commit_github_gourmetise.png" alt="image" id="commit_github_gourmetise">
+            </div>
+        </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
+        <div id="pro">
+            <div class="projet">
+                <img src="./img/accueil_gourmetise.png" alt="image">
+                <img src="./img/params_gourmetise.png" alt="image">
+                <img src="./img/inscription_gourmetise.png" alt="image">
+                <img src="./img/connexion_gourmetise.png" alt="image">
+                <img src="./img/createUser_gourmetise.png" alt="image">
+                <button class="arrow-left">&#10094;</button>
+                <button class="arrow-right">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Trait noir entre les sections -->
+        <div class="trait"></div>
+
+        <div id="bilan">
+            <h3>Bilan Personnel</h3>
+            <p>Ce projet m'a permis de voir comment mettre en place un projet</p>
+        </div>
+    </body>
+    
+    <!-- Trait noir entre les sections -->
+    <div class="trait"></div>
+    <iframe src="footer.html" id="footer-iframe" style="width:100%; height:240px; border:none; bottom: 0; left: 0;"></iframe>
+
+    <!-- Conteneur pour l'image agrandie -->
+    <div id="lightbox" class="lightbox">
+        <span id="close-lightbox" class="close-lightbox">&times;</span>
+        <img id="lightbox-image" class="lightbox-image" src="" alt="">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.projet img');
+        const images2 = document.querySelectorAll('#gestion_pro img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const closeLightbox = document.getElementById('close-lightbox');
+        let currentImageIndex = 0;
+
+        // Ajouter un événement au clic sur chaque image pour afficher dans la lightbox
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                // Afficher l'image dans la lightbox
+                lightboxImage.src = image.src;
+                lightbox.style.display = 'flex'; // Afficher la lightbox
+            });
+        });
+
+        // Ajouter un événement au clic sur chaque image pour afficher dans la lightbox
+        images2.forEach(image => {
+            image.addEventListener('click', () => {
+                // Afficher l'image dans la lightbox
+                lightboxImage.src = image.src;
+                lightbox.style.display = 'flex'; // Afficher la lightbox
+            });
+        });
+
+        // Fermer la lightbox lorsqu'on clique sur la croix
+        closeLightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        // Fermer la lightbox en cliquant en dehors de l'image
+        lightbox.addEventListener('click', (event) => {
+            if (event.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        // Gestion des flèches de navigation
+        document.querySelector('.arrow-left').addEventListener('click', () => {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+            images[currentImageIndex].classList.add('active');
+        });
+
+        document.querySelector('.arrow-right').addEventListener('click', () => {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+            images[currentImageIndex].classList.add('active');
+        });
+
+        // Initialiser la première image
+        images[currentImageIndex].classList.add('active');
+
+    </script>
+    
+</html>

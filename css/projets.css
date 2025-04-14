@@ -6,7 +6,7 @@
     justify-content: center;
     background: #f8f8ff; /* Couleur de fond gris clair */
     max-width: 800px;
-    margin: 3rem auto; /* Centrer la section sur la page */
+    margin: 0; /* Centrer la section sur la page */
     background-color: #fff; /* Fond blanc pour le contenu */
     border-radius: 8px; /* Bords arrondis */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
@@ -36,22 +36,112 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     cursor: pointer; /* Permet de cliquer sur l'image */
+    margin-bottom: 3 rem;
   }
+
+  .projets-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.projets-container > div {
+    flex: 1;
+    max-width: 33.33%;
+    margin: 0;
+}
+
+.tech-logos {
+  display: flex;
+  flex-wrap: wrap; /* Permet de passer à la ligne */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin: 10px;
+}
+
+.tech-logos img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+
+.tech-logos img:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* Lightbox - image en grand avec fade-in */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  opacity: 0; /* Commence invisible */
+  transition: opacity 0.3s ease; /* Effet fade-in */
+}
+
+.lightbox.show {
+  opacity: 1; /* Devient visible lorsqu'on ajoute la classe "show" */
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transition: opacity 0.5s ease;
+}
+
+/* Bouton de fermeture (croix) */
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+  transition: 0.3s;
+}
+
+.close-lightbox:hover {
+  color: #ccc;
+}
+
+
+
+
   
   /* Section responsive pour les projets */
-  @media (max-width: 768px) {
-    .multiburo, .Scrabble, .Gourmetise {
-      padding: 1.5rem;
-      max-width: 90%;
+  @media (max-width: 900px) {
+    .projets-container {
+        flex-direction: column;
     }
-  
-    .multiburo h3, .Scrabble h3, .Gourmetise h3{
-      font-size: 2rem; /* Réduit la taille du titre sur mobile */
+
+    .projets-container > div {
+        max-width: 100%;
+        margin-bottom: 2rem;
     }
-  
-    .multiburo p, .Scrabble p, .Gourmetise p {
-      font-size: 1rem; /* Réduit la taille du texte */
-    }
-  }
+}
+
+
   
   
