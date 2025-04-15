@@ -109,3 +109,56 @@
     background-color: #000; /* Couleur noire */
     margin: 40px auto; /* Centrer la ligne et ajouter un peu de marge autour */
 }
+
+
+
+@media (max-width: 768px) {
+  /* Navbar : empilement vertical sur mobile */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .navbar a {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* Footer : disposition en colonne */
+  .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .col-md-6 {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer p {
+    font-size: 0.95rem;
+  }
+
+  /* Trait de séparation */
+  .trait {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  /* Conteneur général (souvent utilisé dans le footer) */
+  .container {
+    width: 90%;
+  }
+}

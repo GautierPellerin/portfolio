@@ -155,8 +155,35 @@
 }
 
 
-/* Responsivité : Adaptation du projet sur mobile */
+/* =========================== */
+/* === Responsivité mobile === */
+/* =========================== */
 @media (max-width: 768px) {
+
+  /* Réduction des paddings et marges */
+  #stage,
+  #pro,
+  #bilan {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem auto;
+  }
+
+  /* Réduction des titres */
+  #stage h3,
+  #pro #projet h3,
+  #bilan h3 {
+    font-size: 2rem;
+  }
+
+  /* Réduction du texte */
+  #stage p,
+  #pro #projet p,
+  #bilan p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Mise en colonne pour le slider */
   #pro .projet {
     flex-direction: column;
   }
@@ -166,13 +193,23 @@
     margin-bottom: 1rem;
   }
 
+  /* Ajustement des flèches */
+  #pro .projet button {
+    font-size: 1.5rem;
+  }
+
+  /* Section documentation */
   .documentations {
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
   }
 
   .documentations button {
     width: 80%;
+    font-size: 1rem;
+    padding: 0.75rem;
     text-align: center;
   }
 }
+

@@ -125,24 +125,8 @@
   background-color: #f0f8ff; /* Légère teinte bleutée pour mettre en évidence */
 }
 
-/* Responsive design pour mobile */
-@media (max-width: 768px) {
-  #parcours-scolaire {
-    padding: 1.5rem 1rem;
-  }
 
-  .formation h3 {
-    font-size: 1.4rem; /* Taille de texte réduite pour une meilleure lisibilité sur mobile */
-  }
 
-  .formation p {
-    font-size: 0.95rem; /* Légère réduction de la taille du texte */
-  }
-  
-  .parcours {
-    padding: 0;
-  }
-}
 
 
 
@@ -212,18 +196,8 @@
     line-height: 1.5;
 }
 
-/* Responsivité : Adaptation des cartes sur mobile */
-@media (max-width: 768px) {
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .card {
-        width: 80%; /* Prendre plus de place sur les petits écrans */
-        margin-bottom: 20px;
-    }
-}
+
 
 
 
@@ -280,15 +254,93 @@
   margin-bottom: 10px;
 }
 
-/* Responsivité : Adaptation des cartes sur mobile */
+
+
+
 @media (max-width: 768px) {
-  #qualites .cards-container {
-    flex-direction: column;
-    align-items: center;
+  /* Accueil */
+  .accueil {
+    padding: 1.5rem 1rem;
   }
 
+  .accueil h1 {
+    font-size: 2rem;
+  }
+
+  .accueil p {
+    font-size: 1rem;
+  }
+
+  .accueil button {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Parcours scolaire */
+  #parcours-scolaire {
+    padding: 1.5rem 1rem;
+  }
+
+  #parcours-scolaire h2 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .formation h3 {
+    font-size: 1.3rem;
+  }
+
+  .formation p {
+    font-size: 0.95rem;
+  }
+
+  .en-cours {
+    padding-left: 1rem;
+  }
+
+  /* Compétences */
+  .cards-container {
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .card h3 {
+    font-size: 1.2em;
+  }
+
+  .card p {
+    font-size: 0.95em;
+  }
+
+  /* Qualités */
   #qualites .card {
-    width: 80%; /* Prendre plus de place sur les petits écrans */
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  #qualites .card img {
+    width: 150px;
+    height: auto;
+  }
+
+  #qualites .card h3 {
+    font-size: 1.4em;
+  }
+
+  .qualites h2,
+  .competences h2 {
+    font-size: 2rem;
   }
 }

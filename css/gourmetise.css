@@ -267,16 +267,88 @@ img {
 
 
 @media (max-width: 768px) {
+    /* Titres h3 */
+    h3 {
+      font-size: 2rem;
+    }
+  
+    /* Conteneurs principaux */
+    #gourmetise, #pro, #bilan, #gestion_pro {
+      padding: 1.5rem 1rem;
+      margin: 1.5rem auto;
+    }
+  
+    /* Section Objectif */
     #gourmetise .contenu {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
     }
-
+  
     #gourmetise ul {
-        text-align: left;
+      margin: 1rem 0;
+      padding-left: 1.2rem;
     }
-
+  
     #gourmetise_architecture {
-        margin-top: 1rem;
+      max-width: 100%;
+      margin-top: 1rem;
     }
-}
+  
+    #gourmetise p {
+      font-size: 1rem;
+    }
+  
+    /* Section Gestion du projet */
+    #gestion_pro div {
+      flex-direction: column;
+    }
+  
+    #gestion_pro img {
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    /* Section Projet (carrousel) */
+    #pro .projet {
+      flex-direction: column;
+    }
+  
+    #pro #projet p {
+      font-size: 1rem;
+    }
+  
+    #pro .projet button {
+      font-size: 1.5rem;
+    }
+  
+    /* Section Bilan */
+    #bilan p {
+      font-size: 1rem;
+    }
+  
+    /* Boutons documentations */
+    .documentations {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .documentations button {
+      width: 100%;
+      max-width: 250px;
+      font-size: 0.95rem;
+    }
+  
+    /* Lightbox */
+    .lightbox-image {
+      max-width: 95%;
+      max-height: 80%;
+    }
+  
+    .close-lightbox {
+      top: 15px;
+      right: 15px;
+      font-size: 24px;
+    }
+  }
+  

@@ -154,36 +154,65 @@
 
 
   
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .navbar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .navbar a {
-      margin: 0.5rem 0;
-    }
-  
-    #presInetum, .InetumLyon {
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-    }
-  
-    .trait {
-      margin: 1.5rem 0;
-    }
-  
-    .card {
-      width: 80%; /* Cartes plus larges sur mobile */
-      margin-bottom: 20px;
-    }
-  
-    .cards-container {
-      flex-direction: column;
-      align-items: center;
-    }
+@media (max-width: 768px) {
+
+  /* Titres h1 plus petits */
+  h1 {
+    font-size: 2rem;
   }
-  
+
+  /* Présentation d’Inetum */
+  #presInetum,
+  .InetumLyon {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  #presInetum div,
+  .InetumLyon div {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  #inetum,
+  #flex_office {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  #presInetum h3,
+  .InetumLyon h3 {
+    font-size: 1.5rem;
+  }
+
+  #presInetum p,
+  .InetumLyon p {
+    font-size: 0.95rem;
+  }
+
+  /* Cards en colonne */
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .card img {
+    max-height: 180px;
+  }
+}
