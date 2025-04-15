@@ -163,3 +163,94 @@ img {
     cursor: pointer;
     z-index: 1001;
 }
+
+
+/* Section documentations */
+.documentations {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .documentations button {
+    background-color: #003366; /* Bleu foncé comme les titres */
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .documentations button:hover {
+    background-color: lightblue; 
+    transform: scale(1.05);
+  }
+
+
+  /* =========================== */
+/* === Responsivité mobile === */
+/* =========================== */
+
+@media (max-width: 768px) {
+
+    h3 {
+      font-size: 2rem;
+    }
+  
+    #stage2, #pro, #bilan {
+      padding: 1.5rem 1rem;
+      margin: 1.5rem auto;
+    }
+  
+    #stage2 p,
+    #pro #projet p,
+    #bilan p {
+      font-size: 1rem;
+    }
+  
+    /* Mise en colonne des éléments du projet */
+    #pro .projet {
+      flex-direction: column;
+    }
+  
+    #pro .projet img {
+      max-width: 90%;
+      margin-bottom: 1rem;
+    }
+  
+    #pro .projet button {
+      font-size: 1.5rem;
+    }
+  
+    /* Section documentations : empile les boutons */
+    .documentations {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+  
+    .documentations button {
+      width: 80%;
+      font-size: 1rem;
+      padding: 0.75rem;
+      text-align: center;
+    }
+  
+    /* Lightbox image adaptée au petit écran */
+    .lightbox-image {
+      max-width: 95%;
+      max-height: 80%;
+    }
+  
+    .close-lightbox {
+      top: 5px;
+      right: 10px;
+      font-size: 26px;
+    }
+  }
+  

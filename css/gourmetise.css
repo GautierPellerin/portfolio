@@ -198,6 +198,31 @@ h3 {
 }
 
 
+/* Section documentations */
+.documentations {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .documentations button {
+    background-color: #003366; /* Bleu foncé comme les titres */
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .documentations button:hover {
+    background-color: lightblue; 
+    transform: scale(1.05);
+  }
 
 
 
